@@ -4,6 +4,7 @@ import {Routes, Route, Link} from 'react-router-dom';
 
 //views
 import Dashboard from '../views/Dashboard';
+import Pricing from '../views/Pricing';
 
 function NavBar() {
     return (
@@ -26,7 +27,7 @@ function NavBar() {
                             {/* <a class="nav-link" href="/dashboard">Analytics</a> */}
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Pricing</a>
+                            <Link class="nav-link" to="/pricing">Pricing</Link>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
@@ -38,6 +39,7 @@ function NavBar() {
             <Routes>
                 <Route path="/"></Route>
                 <Route path="/analytics" element={<Dashboard/>}>Analytics</Route>
+                <Route path="/pricing" element={<Pricing/>}/>
             </Routes>
         </div>
     )
